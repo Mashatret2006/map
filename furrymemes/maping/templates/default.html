@@ -12,15 +12,20 @@
 </head>
 <body>
   <h1> Map time! </h1>
-  <div id='map' style='width: 400px; height: 300px;'></div>
+  <div id='map' style='width: 1000px; height: 1000px;'></div>
   <script>
   mapboxgl.accessToken = 'pk.eyJ1IjoibWFzaGF0cmV0MjAwNiIsImEiOiJjazNia2c1amYwajNwM2NsZGpheHB1Y29mIn0.QegkEY39EJLAuB1Y_ba47A';
   var map = new mapboxgl.Map({
   container: 'map',
   style:  'mapbox://styles/mapbox/streets-v10',
-  center:  [- 77.03,  38.91],
-  zoom:  9
+
   });
+  var marker = new mapboxgl.Marker()
+  .setLngLat([30.5, 50.5])
+  .addTo(map);
+  var marker = new mapboxgl.Marker()
+  .setLngLat([-30.5, -50.5])
+  .addTo(map);
   </script>
 </body>
 </html>
